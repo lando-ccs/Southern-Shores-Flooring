@@ -9,6 +9,16 @@
   var thanks = document.getElementById('form-thanks');
   var fallback = 'Please call or text 843-742-9776.';
 
+  // Plain-English error messages for fields that need a certain format
+  // (the browser's built-in messages are vague, like "Match the requested format").
+  form.querySelectorAll('[data-error]').forEach(function (field) {
+    field.addEventListener('invalid', function () {
+      if (field.validity.valueMissing) field.setCustomValidity('');
+      else field.setCustomValidity(field.dataset.error);
+    });
+    field.addEventListener('input', function () { field.setCustomValidity(''); });
+  });
+
   form.addEventListener('submit', function (event) {
     event.preventDefault();
 

@@ -287,11 +287,15 @@
           </label>
           <label class="field">
             <span>Phone <span class="req">(required)</span></span>
-            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required
+                   pattern="\s*(\+?1[\s.\-]?)?\(?\d{3}\)?[\s.\-]?\d{3}[\s.\-]?\d{4}\s*"
+                   data-error="Please enter a 10-digit phone number, like 843-555-0123.">
           </label>
           <label class="field">
-            Email
-            <input type="email" name="email" autocomplete="email">
+            <span>Email <span class="req">(required)</span></span>
+            <input type="email" name="email" autocomplete="email" required
+                   pattern="\s*[^@\s]+@[^@\s]+\.[^@\s]{2,}\s*"
+                   data-error="Please enter an email address, like name@example.com.">
           </label>
           <label class="field">
             Project type
