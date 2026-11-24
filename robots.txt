@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://southernshoresflooring.com/sitemap.xml

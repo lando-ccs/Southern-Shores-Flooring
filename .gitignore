@@ -1,0 +1,10 @@
+# Mac clutter
+.DS_Store
+
+# Local tooling (not part of the website)
+.claude/
+
+# Working notes. Everything in this repo gets published on the web,
+# so these stay on Lando's computer only.
+BRIEF.md
+CLAUDE.md
