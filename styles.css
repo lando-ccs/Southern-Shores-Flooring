@@ -291,6 +291,12 @@ a:hover { color: var(--navy); }
 .mini-card h3 { font-weight: 800; font-size: 22px; }
 .mini-card p { font-size: 16px; line-height: 1.55; color: var(--text); }
 
+/* Desktop: taller LVP photo, small cards stretch to match with tighter gaps */
+@media (min-width: 1000px) {
+  .feature-card img { flex: 1 1 auto; height: 420px; }
+  .mini-grid { gap: 14px; }
+}
+
 /* ---------- How it works ---------- */
 .process { background: var(--mist); }
 .process .container { gap: 36px; }
